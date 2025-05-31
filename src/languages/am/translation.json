@@ -1,0 +1,62 @@
+{
+    "church": {
+        "name": "Debre Mihert Kidus Michael",
+        "nameAmharic": "ደብረ ምሕረት ቅዱስ ሚካኤል"
+    },
+    "nav": {
+        "about": "ስለ እኛ",
+        "payments": "ክፍያዎች",
+        "sundaySchool": "እሁድ ት/ቤት",
+        "sermon": "ስብከቶች",
+        "contact": "ያግኙን"
+    },
+    "footer": {
+        "connect": "ከእኛ ጋር ይገናኙ",
+        "contactInfo": "የመገናኛ መረጃ",
+        "address": "123 ቤተክርስቲያን አደባባይ፣ ሲያትል፣ WA 98101",
+        "phone": "+1 (555) 123-4567",
+        "email": "info@church.org"
+    },
+    "pages": {
+        "home": {
+            "title": "ወደ ቤተክርስቲያናችን እንኳን በደህና መጡ",
+            "content": "በአምልኮ እና በአብሮነት ይቀላቀሉን።"
+        },
+        "about": {
+            "title": "ስለ ቤተክርስቲያናችን",
+            "content": "ስለ ታሪካችን እና ተልእኮአችን ይወቁ።"
+        },
+        "payments": {
+            "title": "የመስመር ላይ ክፍያዎች",
+            "content": "ለገሶችዎ እና ክፍያዎችዎ በመስመር ላይ ይክፈሉ።"
+        },
+        "sundaySchool": {
+            "title": "እሁድ ት/ቤት",
+            "content": "በእሁድ ት/ቤት ፕሮግራማችን ይቀላቀሉ።"
+        },
+        "sermon": {
+            "title": "ስብከቶች እና በቀጥታ የሚተላለፍ",
+            "content": "የቅርብ ጊዜ ስብከቶቻችንን እና በቀጥታ የሚተላለፉትን ይመልከቱ።"
+        },
+        "contact": {
+            "title": "ያግኙን",
+            "content": "ከቤተክርስቲያናችን ማህበረሰብ ጋር ይገናኙ።"
+        }
+    },
+    "contact": {
+        "form": {
+            "name": "ሙሉ ስም",
+            "namePlaceholder": "ሙሉ ስምዎን ያስገቡ",
+            "phone": "ስልክ ቁጥር",
+            "phonePlaceholder": "ስልክ ቁጥርዎን ያስገቡ",
+            "email": "ኢሜይል አድራሻ",
+            "emailPlaceholder": "ኢሜይል አድራሻዎን ያስገቡ",
+            "purpose": "የመገናኘት ዓላማ",
+            "purposePlaceholder": "እንዴት እንድንረዳዎት እንደምትችሉ ያሳውቁን",
+            "submit": "መልእክት ይላኩ",
+            "submitting": "ይላካል...",
+            "success": "ለመልእክትዎ አመሰግናለን። በቅርቡ እንመልስዎታለን።",
+            "error": "መልእክትዎን በማስተላለፍ ላይ ስህተት ተከስቷል። እባክዎ እንደገና ይሞከሩ።"
+        }
+    }
+}
