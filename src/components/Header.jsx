@@ -10,13 +10,48 @@ const Header = () => {
     const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
     const location = useLocation();
-
+    const image = "../assets/youtube.png";
     const navItems = [
-        { path: "/about", label: t("nav.about") },
-        { path: "/payments", label: t("nav.payments") },
-        { path: "/sundaySchool", label: t("nav.sundaySchool") },
-        { path: "/sermon", label: t("nav.sermon") },
-        { path: "/contact", label: t("nav.contact") },
+        {
+            path: "/about",
+            label: t("nav.about"),
+            dropdownItems: [
+                { path: "/about/history", label: t("nav.aboutHistory") },
+                { path: "/about/leadership", label: t("nav.aboutLeadership") },
+            ],
+        },
+        {
+            path: "/payments",
+            label: t("nav.payments"),
+            dropdownItems: [
+                { path: "/payments/tithe", label: t("nav.tithe") },
+                { path: "/payments/offering", label: t("nav.offering") },
+            ],
+        },
+        {
+            path: "/sundaySchool",
+            label: t("nav.sundaySchool"),
+            dropdownItems: [
+                { path: "/sundaySchool/classes", label: t("nav.classes") },
+                { path: "/sundaySchool/teachers", label: t("nav.teachers") },
+            ],
+        },
+        {
+            path: "/sermon",
+            label: t("nav.sermon"),
+            dropdownItems: [
+                { path: "/sermon/archive", label: t("nav.sermonArchive") },
+                { path: "/sermon/upcoming", label: t("nav.upcomingSermons") },
+            ],
+        },
+        {
+            path: "/contact",
+            label: t("nav.contact"),
+            dropdownItems: [
+                { path: "/contact/location", label: t("nav.location") },
+                { path: "/contact/feedback", label: t("nav.feedback") },
+            ],
+        },
     ];
 
     const toggleMenu = () => {
@@ -33,7 +68,8 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-white shadow-md">
+        <header className=" shadow-md">
+            <img src="" alt="" />
             <div className="max-w-7xl mx-auto px-6 py-4">
                 <div className="flex justify-between items-center">
                     {/* Logo and Title */}
@@ -56,17 +92,41 @@ const Header = () => {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-6">
                         {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
-                                    location.pathname === item.path
-                                        ? "text-blue-600 font-medium"
-                                        : ""
-                                }`}
-                            >
-                                {item.label}
-                            </Link>
+                            <div key={item.path} className="relative group">
+                                <Link
+                                    to={item.path}
+                                    className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
+                                        location.pathname.startsWith(item.path)
+                                            ? "text-blue-600 font-medium"
+                                            : ""
+                                    }`}
+                                >
+                                    {item.label}
+                                </Link>
+                                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                    {item.dropdownItems.map((dropdownItem) =>
+                                        dropdownItem.isExternal ? (
+                                            <a
+                                                key={dropdownItem.path}
+                                                href={dropdownItem.path}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            >
+                                                {dropdownItem.label}
+                                            </a>
+                                        ) : (
+                                            <Link
+                                                key={dropdownItem.path}
+                                                to={dropdownItem.path}
+                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            >
+                                                {dropdownItem.label}
+                                            </Link>
+                                        )
+                                    )}
+                                </div>
+                            </div>
                         ))}
                         <div className="relative">
                             <button
@@ -117,18 +177,51 @@ const Header = () => {
                     <div className="md:hidden mt-4 py-4 border-t border-gray-200">
                         <nav className="flex flex-col space-y-4">
                             {navItems.map((item) => (
-                                <Link
-                                    key={item.path}
-                                    to={item.path}
-                                    className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
-                                        location.pathname === item.path
-                                            ? "text-blue-600 font-medium"
-                                            : ""
-                                    }`}
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {item.label}
-                                </Link>
+                                <div key={item.path} className="flex flex-col">
+                                    <Link
+                                        to={item.path}
+                                        className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
+                                            location.pathname.startsWith(
+                                                item.path
+                                            )
+                                                ? "text-blue-600 font-medium"
+                                                : ""
+                                        }`}
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                    <div className="ml-4 mt-2 space-y-2">
+                                        {item.dropdownItems.map(
+                                            (dropdownItem) =>
+                                                dropdownItem.isExternal ? (
+                                                    <a
+                                                        key={dropdownItem.path}
+                                                        href={dropdownItem.path}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="block text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                                                        onClick={() =>
+                                                            setIsMenuOpen(false)
+                                                        }
+                                                    >
+                                                        {dropdownItem.label}
+                                                    </a>
+                                                ) : (
+                                                    <Link
+                                                        key={dropdownItem.path}
+                                                        to={dropdownItem.path}
+                                                        className="block text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                                                        onClick={() =>
+                                                            setIsMenuOpen(false)
+                                                        }
+                                                    >
+                                                        {dropdownItem.label}
+                                                    </Link>
+                                                )
+                                        )}
+                                    </div>
+                                </div>
                             ))}
                             <div className="flex items-center space-x-2">
                                 <MdLanguage className="text-xl text-gray-600" />

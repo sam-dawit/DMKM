@@ -38,13 +38,13 @@ const Footer = () => {
                     {/* Contact Information */}
                     <div className="space-y-3">
                         <h3 className="text-lg font-semibold">
-                            {t("footer.contactInfo")}
+                            {t("Debre Mihert Kidus Michael Church")}
                         </h3>
                         <div className="space-y-1 text-sm text-gray-300">
-                            <p>123 Church Street</p>
-                            <p>City, State 12345</p>
+                            <p>10056 Renton Ave S</p>
+                            <p>Seattle, WA 98178</p>
                             <p>Phone: (123) 456-7890</p>
-                            <p>Email: info@church.com</p>
+                            <p>Email: dmkmseattle@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="mt-6 pt-4 border-t border-gray-700 text-center text-sm text-gray-400">
                     <p>
-                        © {new Date().getFullYear()} {t("church.name")}.{" "}
-                        {t("footer.rights")}
+                        © {new Date().getFullYear()} {t("church.name")}
                     </p>
                 </div>
             </div>
