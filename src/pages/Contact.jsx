@@ -77,7 +77,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="w-full min-h-screen bg-gradient-to-b from-white via-blue-50 to-gray-50">
+        <div className="w-full min-h-screen bg-blue-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="max-w-4xl mx-auto">
                     {/* Header Section */}
@@ -143,34 +143,6 @@ const Contact = () => {
                                 {errors.email && (
                                     <p className="mt-1 text-sm text-red-600">
                                         {errors.email}
-                                    </p>
-                                )}
-                            </div>
-
-                            {/* Phone Field */}
-                            <div>
-                                <label
-                                    htmlFor="phone"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    {t("Phone Number")} *
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    className={`w-full px-4 py-3 rounded-lg border ${
-                                        errors.phone
-                                            ? "border-red-500"
-                                            : "border-gray-300"
-                                    } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                                    placeholder={t("Phone Number")}
-                                />
-                                {errors.phone && (
-                                    <p className="mt-1 text-sm text-red-600">
-                                        {errors.phone}
                                     </p>
                                 )}
                             </div>

@@ -3,7 +3,7 @@ import SuperFlowSwiper from "../../components/SuperFlowSwiper";
 
 const Gallery = () => {
     return (
-        <div className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50 py-12">
+        <div className="w-full min-h-screen bg-blue-300 py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
                     Sunday School Gallery

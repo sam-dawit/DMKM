@@ -5,7 +5,7 @@ const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <footer className="bg-gray-800 text-white py-6">
+        <footer className="bg-gray-800 text-white py-6 mt-auto">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Social Media Links */}
@@ -38,13 +38,12 @@ const Footer = () => {
                     {/* Contact Information */}
                     <div className="space-y-3">
                         <h3 className="text-lg font-semibold">
-                            {t("Debre Mihert Kidus Michael Church")}
+                            {t("church.name")}
                         </h3>
                         <div className="space-y-1 text-sm text-gray-300">
-                            <p>10056 Renton Ave S</p>
-                            <p>Seattle, WA 98178</p>
-                            <p>Phone: (123) 456-7890</p>
-                            <p>Email: dmkmseattle@gmail.com</p>
+                            <p>{t("footer.address")}</p>
+                            <p>Phone: {t("footer.phone")}</p>
+                            <p>Email: {t("footer.email")}</p>
                         </div>
                     </div>
                 </div>

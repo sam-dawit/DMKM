@@ -67,8 +67,8 @@ const Header = () => {
     return (
         <header className="shadow-md">
             <img src={youtube} alt="header" />
-            <div className="max-w-7xl mx-auto px-6 py-4">
-                <div className="flex justify-between items-center">
+            <div className=" mx-auto px-4 py-2 bg-blue-400 w-full">
+                <div className="flex justify-between items-center ">
                     {/* Logo and Title */}
                     <Link to="/" className="flex items-center space-x-4 group">
                         <img
@@ -77,10 +77,10 @@ const Header = () => {
                             className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110 rounded-full border-2 border-gray-300 shadow-lg p-1"
                         />
                         <div className="flex flex-col">
-                            <h1 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                            <h1 className="text-xl font-bold text-gray-800 group-hover:text-white transition-colors duration-300">
                                 {t("church.name")}
                             </h1>
-                            <h2 className="text-sm text-gray-600 group-hover:text-blue-500 transition-colors duration-300">
+                            <h2 className="text-sm  group-hover:text-white transition-colors duration-300">
                                 {t("church.nameAmharic")}
                             </h2>
                         </div>
@@ -92,7 +92,7 @@ const Header = () => {
                             <div key={item.path} className="relative group">
                                 <Link
                                     to={item.path}
-                                    className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
+                                    className={` hover:text-white transition-colors duration-300 ${
                                         location.pathname.startsWith(item.path)
                                             ? "text-blue-600 font-medium"
                                             : ""
@@ -120,7 +120,7 @@ const Header = () => {
                         <div className="relative">
                             <button
                                 onClick={toggleLanguageMenu}
-                                className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                                className="flex items-center space-x-1  hover:text-white transition-colors duration-300"
                                 aria-label="Change language"
                             >
                                 <MdLanguage className="text-xl" />
@@ -150,7 +150,7 @@ const Header = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={toggleMenu}
-                        className="md:hidden text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                        className="md:hidden  hover:text-white transition-colors duration-300"
                         aria-label="Toggle menu"
                     >
                         {isMenuOpen ? (
@@ -169,7 +169,7 @@ const Header = () => {
                                 <div key={item.path} className="flex flex-col">
                                     <Link
                                         to={item.path}
-                                        className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
+                                        className={` hover:text-white transition-colors duration-300 ${
                                             location.pathname.startsWith(
                                                 item.path
                                             )
@@ -187,7 +187,7 @@ const Header = () => {
                                                     <Link
                                                         key={dropdownItem.path}
                                                         to={dropdownItem.path}
-                                                        className="block text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                                                        className="block  hover:text-white transition-colors duration-300"
                                                         onClick={() =>
                                                             setIsMenuOpen(false)
                                                         }
@@ -201,10 +201,10 @@ const Header = () => {
                                 </div>
                             ))}
                             <div className="flex items-center space-x-2">
-                                <MdLanguage className="text-xl text-gray-600" />
+                                <MdLanguage className="text-xl " />
                                 <button
                                     onClick={() => changeLanguage("en")}
-                                    className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
+                                    className={` hover:text-white transition-colors duration-300 ${
                                         i18n.language === "en"
                                             ? "text-blue-600 font-medium"
                                             : ""
@@ -215,7 +215,7 @@ const Header = () => {
                                 <span className="text-gray-300">|</span>
                                 <button
                                     onClick={() => changeLanguage("am")}
-                                    className={`text-gray-600 hover:text-blue-600 transition-colors duration-300 ${
+                                    className={` hover:text-white transition-colors duration-300 ${
                                         i18n.language === "am"
                                             ? "text-blue-600 font-medium"
                                             : ""
