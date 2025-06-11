@@ -66,7 +66,11 @@ const Header = () => {
 
     return (
         <header className="shadow-md">
-            <img src={youtube} alt="header" />
+            <img
+                src={youtube}
+                alt="header"
+                className="w-full max-w-full h-auto"
+            />
             <div className=" mx-auto px-4 py-2 bg-blue-400 w-full">
                 <div className="flex justify-between items-center ">
                     {/* Logo and Title */}
@@ -117,6 +121,13 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
+                        <Link
+                            to="https://www.paypal.com/donate/?hosted_button_id=AXFVB9445SNEY"
+                            target="_Blank"
+                            className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium"
+                        >
+                            Donate
+                        </Link>
                         <div className="relative">
                             <button
                                 onClick={toggleLanguageMenu}
@@ -187,7 +198,7 @@ const Header = () => {
                                                     <Link
                                                         key={dropdownItem.path}
                                                         to={dropdownItem.path}
-                                                        className="block  hover:text-white transition-colors duration-300"
+                                                        className="block  transition-colors duration-300"
                                                         onClick={() =>
                                                             setIsMenuOpen(false)
                                                         }
@@ -200,6 +211,14 @@ const Header = () => {
                                     )}
                                 </div>
                             ))}
+                            <Link
+                                to="https://www.paypal.com/donate/?hosted_button_id=AXFVB9445SNEY"
+                                target="_blank"
+                                className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium text-center"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Donate
+                            </Link>
                             <div className="flex items-center space-x-2">
                                 <MdLanguage className="text-xl " />
                                 <button
