@@ -33,28 +33,38 @@ const Payments = () => {
                             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
                                 {t("pages.payments.donateDescription")}
                             </p>
-                            <a
-                                href="https://square.link/u/iJ3gGX6I?src=sheet"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center px-10 py-5 text-xl font-semibold text-blue-600 bg-white rounded-xl shadow-lg hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 transform hover:scale-105"
+                            <form
+                                action="https://www.paypal.com/donate"
+                                method="post"
+                                target="_top"
                             >
-                                <svg
-                                    className="w-7 h-7 mr-3"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                </svg>
-                                {t("pages.payments.donate")}
-                            </a>
+                                <input
+                                    type="hidden"
+                                    name="hosted_button_id"
+                                    value="AXFVB9445SNEY"
+                                />
+                                <input
+                                    type="image"
+                                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                    border="0"
+                                    name="submit"
+                                    title="PayPal - The safer, easier way to pay online!"
+                                    alt="Donate with PayPal button"
+                                />
+                                <img
+                                    alt=""
+                                    border="0"
+                                    src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                                    width="1"
+                                    height="1"
+                                    onClick={() => {
+                                        window.open(
+                                            "https://www.paypal.com/donate/?hosted_button_id=AXFVB9445SNEY",
+                                            "_blank"
+                                        );
+                                    }}
+                                />
+                            </form>
                         </div>
                     </div>
 

@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
-import Location from "../location/Location";
-
+import Location from "../location/location";
 const Sermon = () => {
     const { t } = useTranslation();
 
@@ -79,13 +78,7 @@ const Sermon = () => {
                         </div>
                     </div>
 
-                    {/* Church Location */}
-                    <div className="mt-12">
-                        <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                            Church Location
-                        </h2>
-                        <Location />
-                    </div>
+                    {/* Church Location*/}
                 </div>
             </div>
         </div>
