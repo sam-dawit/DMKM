@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Location from "../location/location";
+import Location from "../location/Location";
 import SuperFlowSwiper from "../components/SuperFlowSwiper";
 
 const Home = () => {
@@ -18,14 +18,14 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <div className="h-full">
-                    <SuperFlowSwiper />
-                </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="text-3xl font-semibold text-gray-800 mb-6">
                         Church Location
                     </h2>
                     <Location />
+                </div>
+                <div className="h-full">
+                    <SuperFlowSwiper />
                 </div>
             </div>
         </div>
