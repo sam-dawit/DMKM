@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Location from "../location/location";
+import Location from "../location/Location";
 import SuperFlowSwiper from "../components/SuperFlowSwiper";
 
 const Home = () => {

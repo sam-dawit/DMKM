@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { FaYoutube, FaInstagram } from "react-icons/fa";
-import Location from "../location/location";
 const Sermon = () => {
     const { t } = useTranslation();
 
