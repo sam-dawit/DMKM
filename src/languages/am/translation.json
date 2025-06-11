@@ -8,14 +8,18 @@
         "payments": "ክፍያዎች",
         "sundaySchool": "እሁድ ት/ቤት",
         "sermon": "ስብከቶች",
-        "contact": "ያግኙን"
+        "contact": "ያግኙን",
+        "aboutHistory": "ታሪክ",
+        "aboutLeadership": "ቁጥጥር",
+        "tithe": "አስረዳ",
+        "offering": "ስጦታ"
     },
     "footer": {
         "connect": "ከእኛ ጋር ይገናኙ",
         "contactInfo": "የመገናኛ መረጃ",
-        "address": "123 ቤተክርስቲያን አደባባይ፣ ሲያትል፣ WA 98101",
-        "phone": "+1 (555) 123-4567",
-        "email": "info@church.org"
+        "address": "10056 Renton Ave S, Seattle, WA 98178",
+        "phone": "(123) 456-7890",
+        "email": "dmkmseattle@gmail.com"
     },
     "pages": {
         "home": {
@@ -28,7 +32,11 @@
         },
         "payments": {
             "title": "የመስመር ላይ ክፍያዎች",
-            "content": "ለገሶችዎ እና ክፍያዎችዎ በመስመር ላይ ይክፈሉ።"
+            "content": "ለገሶችዎ እና ክፍያዎችዎ በመስመር ላይ ይክፈሉ።",
+            "titheTitle": "አስረዳ",
+            "titheDescription": "የቤተክርስቲያናችንን ተልእኮ እና አገልግሎቶች ለመደገፍ አስረዳዎን ይስጡ።",
+            "offeringTitle": "ስጦታ",
+            "offeringDescription": "የተወሰኑ የቤተክርስቲያን ፕሮግራሞችን እና ፍላጎቶችን ለመደገፍ ስጦታ ይስጡ።"
         },
         "sundaySchool": {
             "title": "እሁድ ት/ቤት",

@@ -8,14 +8,18 @@
         "payments": "Payments",
         "sundaySchool": "Sunday School",
         "sermon": "Sermons",
-        "contact": "Contact Us"
+        "contact": "Contact Us",
+        "aboutHistory": "History",
+        "aboutLeadership": "Leadership",
+        "tithe": "Tithe",
+        "offering": "Offering"
     },
     "footer": {
         "connect": "Connect with us",
         "contact": "Contact Information",
-        "address": "123 Church Street, Seattle, WA 98101",
-        "phone": "+1 (555) 123-4567",
-        "email": "info@church.org"
+        "address": "10056 Renton Ave S, Seattle, WA 98178",
+        "phone": "(123) 456-7890",
+        "email": "dmkmseattle@gmail.com"
     },
     "pages": {
         "home": {
@@ -28,7 +32,11 @@
         },
         "payments": {
             "title": "Online Payments",
-            "content": "Make your donations and payments online."
+            "content": "Make your donations and payments online.",
+            "titheTitle": "Tithe",
+            "titheDescription": "Give your tithe to support the church's mission and ministries.",
+            "offeringTitle": "Offering",
+            "offeringDescription": "Make an offering to support specific church programs and needs."
         },
         "sundaySchool": {
             "title": "Sunday School",

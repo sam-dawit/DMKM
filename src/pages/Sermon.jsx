@@ -79,12 +79,7 @@ const Sermon = () => {
                     </div>
 
                     {/* Church Location*/}
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                            Church Location
-                        </h2>
-                        <Location />
-                    </div>
+                    
                 </div>
             </div>
         </div>

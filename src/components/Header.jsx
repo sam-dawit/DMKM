@@ -4,13 +4,14 @@ import { MdLanguage } from "react-icons/md";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo.png";
+import youtube from "../assets/youtube.png";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
     const location = useLocation();
-    const image = "../assets/youtube.png";
+
     const navItems = [
         {
             path: "/about",
@@ -32,25 +33,21 @@ const Header = () => {
             path: "/sundaySchool",
             label: t("nav.sundaySchool"),
             dropdownItems: [
-                { path: "/sundaySchool/classes", label: t("nav.classes") },
-                { path: "/sundaySchool/teachers", label: t("nav.teachers") },
+                { path: "/sundaySchool/classes", label: "Classes" },
+                { path: "/sundaySchool/gallery", label: "Gallery" },
             ],
         },
         {
             path: "/sermon",
             label: t("nav.sermon"),
             dropdownItems: [
-                { path: "/sermon/archive", label: t("nav.sermonArchive") },
-                { path: "/sermon/upcoming", label: t("nav.upcomingSermons") },
+                { path: "/sermon/archive", label: "Past Sermons" },
+                { path: "/sermon/upcoming", label: "Upcoming Sermons" },
             ],
         },
         {
             path: "/contact",
             label: t("nav.contact"),
-            dropdownItems: [
-                { path: "/contact/location", label: t("nav.location") },
-                { path: "/contact/feedback", label: t("nav.feedback") },
-            ],
         },
     ];
 
@@ -68,8 +65,8 @@ const Header = () => {
     };
 
     return (
-        <header className=" shadow-md">
-            <img src="" alt="" />
+        <header className="shadow-md">
+            <img src={youtube} alt="header" />
             <div className="max-w-7xl mx-auto px-6 py-4">
                 <div className="flex justify-between items-center">
                     {/* Logo and Title */}
@@ -103,29 +100,21 @@ const Header = () => {
                                 >
                                     {item.label}
                                 </Link>
-                                <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                    {item.dropdownItems.map((dropdownItem) =>
-                                        dropdownItem.isExternal ? (
-                                            <a
-                                                key={dropdownItem.path}
-                                                href={dropdownItem.path}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                            >
-                                                {dropdownItem.label}
-                                            </a>
-                                        ) : (
-                                            <Link
-                                                key={dropdownItem.path}
-                                                to={dropdownItem.path}
-                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                            >
-                                                {dropdownItem.label}
-                                            </Link>
-                                        )
-                                    )}
-                                </div>
+                                {item.dropdownItems && (
+                                    <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                        {item.dropdownItems.map(
+                                            (dropdownItem) => (
+                                                <Link
+                                                    key={dropdownItem.path}
+                                                    to={dropdownItem.path}
+                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                                >
+                                                    {dropdownItem.label}
+                                                </Link>
+                                            )
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         ))}
                         <div className="relative">
@@ -191,23 +180,10 @@ const Header = () => {
                                     >
                                         {item.label}
                                     </Link>
-                                    <div className="ml-4 mt-2 space-y-2">
-                                        {item.dropdownItems.map(
-                                            (dropdownItem) =>
-                                                dropdownItem.isExternal ? (
-                                                    <a
-                                                        key={dropdownItem.path}
-                                                        href={dropdownItem.path}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="block text-gray-600 hover:text-blue-600 transition-colors duration-300"
-                                                        onClick={() =>
-                                                            setIsMenuOpen(false)
-                                                        }
-                                                    >
-                                                        {dropdownItem.label}
-                                                    </a>
-                                                ) : (
+                                    {item.dropdownItems && (
+                                        <div className="ml-4 mt-2 space-y-2">
+                                            {item.dropdownItems.map(
+                                                (dropdownItem) => (
                                                     <Link
                                                         key={dropdownItem.path}
                                                         to={dropdownItem.path}
@@ -219,8 +195,9 @@ const Header = () => {
                                                         {dropdownItem.label}
                                                     </Link>
                                                 )
-                                        )}
-                                    </div>
+                                            )}
+                                        </div>
+                                    )}
                                 </div>
                             ))}
                             <div className="flex items-center space-x-2">

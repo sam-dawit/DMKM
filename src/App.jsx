@@ -6,6 +6,8 @@ import About from "./pages/About";
 import Payments from "./pages/Payments";
 import Languages from "./pages/Languages";
 import SundaySchool from "./pages/SundaySchool";
+import Classes from "./pages/SundaySchool/Classes";
+import Gallery from "./pages/SundaySchool/Gallery";
 import Sermon from "./pages/Sermon";
 import Contact from "./pages/Contact";
 import "./App.css";
@@ -23,8 +25,16 @@ function App() {
                         <Route path="/payments" element={<Payments />} />
                         <Route path="/languages" element={<Languages />} />
                         <Route
-                            path="/sunday-school"
+                            path="/sundaySchool"
                             element={<SundaySchool />}
+                        />
+                        <Route
+                            path="/sundaySchool/classes"
+                            element={<Classes />}
+                        />
+                        <Route
+                            path="/sundaySchool/gallery"
+                            element={<Gallery />}
                         />
                         <Route path="/sermon" element={<Sermon />} />
                         <Route path="/contact" element={<Contact />} />
