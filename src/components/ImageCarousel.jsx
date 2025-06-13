@@ -8,19 +8,19 @@ import MediaLightbox from "./MediaLightbox";
 const images = [
     {
         type: "image",
-        image: "/src/assets/church1.png",
+        image: "./assets/Church1.png",
     },
     {
         type: "image",
-        image: "/src/assets/Church2.png",
+        image: "./assets/Church2.png",
     },
     {
         type: "image",
-        image: "/src/assets/Church3.png",
+        image: "./assets/Church3.png",
     },
     {
         type: "image",
-        image: "/src/assets/Church4.png",
+        image: "./assets/Church4.png",
     },
 ];
 
