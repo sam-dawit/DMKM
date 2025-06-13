@@ -6,19 +6,19 @@ import "swiper/css/effect-coverflow";
 
 const slides = [
     {
-        image: "/src/assets/church1.png",
+        image: "/img/church1.png",
         link: "/sundaySchool/gallery",
     },
     {
-        image: "/src/assets/Church2.png",
+        image: "/img/Church2.png",
         link: "/sundaySchool/gallery",
     },
     {
-        image: "/src/assets/Church3.png",
+        image: "/img/Church3.png",
         link: "/sundaySchool/gallery",
     },
     {
-        image: "/src/assets/Church4.png",
+        image: "/img/Church4.png",
         link: "/sundaySchool/gallery",
     },
 ];
