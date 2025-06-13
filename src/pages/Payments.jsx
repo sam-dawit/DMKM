@@ -36,7 +36,7 @@ const Payments = () => {
                             <form
                                 action="https://www.paypal.com/donate"
                                 method="post"
-                                target="_top"
+                                target=" _blank"
                             >
                                 <input
                                     type="hidden"

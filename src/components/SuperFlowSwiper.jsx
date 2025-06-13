@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
@@ -27,12 +27,16 @@ const SuperFlowSwiper = () => {
     return (
         <div className="flex justify-center py-8 bg-gray-900 min-h-[300px]">
             <Swiper
-                modules={[EffectCoverflow]}
+                modules={[EffectCoverflow, Autoplay]}
                 effect="coverflow"
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={3}
                 loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
                 coverflowEffect={{
                     rotate: 30,
                     stretch: 10,

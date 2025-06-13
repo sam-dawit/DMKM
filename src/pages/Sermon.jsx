@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaVideo, FaHistory } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Sermon = () => {
     const { t } = useTranslation();
 
@@ -28,6 +30,49 @@ const Sermon = () => {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
                             ></iframe>
+                        </div>
+                    </div>
+
+                    {/* Navigation Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        {/* Sermons Section */}
+                        <div className="bg-white p-6 rounded-lg shadow-md">
+                            <div className="flex items-center mb-4">
+                                <FaVideo className="text-blue-600 text-3xl mr-3" />
+                                <h3 className="text-2xl font-semibold text-gray-800">
+                                    Sermons
+                                </h3>
+                            </div>
+                            <p className="text-gray-600 mb-4">
+                                Access our collection of recorded sermons and
+                                teachings.
+                            </p>
+                            <Link
+                                to="/sermons"
+                                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                            >
+                                View Sermons
+                            </Link>
+                        </div>
+
+                        {/* Past Live Streams Section */}
+                        <div className="bg-white p-6 rounded-lg shadow-md">
+                            <div className="flex items-center mb-4">
+                                <FaHistory className="text-purple-600 text-3xl mr-3" />
+                                <h3 className="text-2xl font-semibold text-gray-800">
+                                    Past Live Streams
+                                </h3>
+                            </div>
+                            <p className="text-gray-600 mb-4">
+                                Watch recordings of our previous live streams
+                                and services.
+                            </p>
+                            <Link
+                                to="/past-live"
+                                className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
+                            >
+                                View Past Streams
+                            </Link>
                         </div>
                     </div>
 
@@ -76,8 +121,6 @@ const Sermon = () => {
                             </a>
                         </div>
                     </div>
-
-                    {/* Church Location*/}
                 </div>
             </div>
         </div>

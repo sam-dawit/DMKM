@@ -97,7 +97,7 @@ const Contact = () => {
                                     htmlFor="name"
                                     className="block text-sm font-medium text-gray-700 mb-1"
                                 >
-                                    {t("form.labels.name")} *
+                                    {t("Full Name")} *
                                 </label>
                                 <input
                                     type="text"
@@ -110,7 +110,9 @@ const Contact = () => {
                                             ? "border-red-500"
                                             : "border-gray-300"
                                     } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                                    placeholder={t("Full Name")}
+                                    placeholder={t(
+                                        "contact.form.namePlaceholder"
+                                    )}
                                 />
                                 {errors.name && (
                                     <p className="mt-1 text-sm text-red-600">
@@ -128,7 +130,7 @@ const Contact = () => {
                                     {t("Email Address")} *
                                 </label>
                                 <input
-                                    type=""
+                                    type="email"
                                     id="email"
                                     name="email"
                                     value={formData.email}
@@ -138,7 +140,9 @@ const Contact = () => {
                                             ? "border-red-500"
                                             : "border-gray-300"
                                     } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                                    placeholder={t("Email Address")}
+                                    placeholder={t(
+                                        "contact.form.emailPlaceholder"
+                                    )}
                                 />
                                 {errors.email && (
                                     <p className="mt-1 text-sm text-red-600">
@@ -166,7 +170,9 @@ const Contact = () => {
                                             ? "border-red-500"
                                             : "border-gray-300"
                                     } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                                    placeholder={t("Subject")}
+                                    placeholder={t(
+                                        "contact.form.purposePlaceholder"
+                                    )}
                                 />
                                 {errors.subject && (
                                     <p className="mt-1 text-sm text-red-600">
@@ -181,7 +187,7 @@ const Contact = () => {
                                     htmlFor="message"
                                     className="block text-sm font-medium text-gray-700 mb-1"
                                 >
-                                    {t("form.labels.message")} *
+                                    {t("Message")} *
                                 </label>
                                 <textarea
                                     id="message"
@@ -194,7 +200,9 @@ const Contact = () => {
                                             ? "border-red-500"
                                             : "border-gray-300"
                                     } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200`}
-                                    placeholder={t("form.placeholders.message")}
+                                    placeholder={t(
+                                        "contact.form.messagePlaceholder"
+                                    )}
                                 ></textarea>
                                 {errors.message && (
                                     <p className="mt-1 text-sm text-red-600">
@@ -239,7 +247,7 @@ const Contact = () => {
                                             {t("form.submitting")}
                                         </span>
                                     ) : (
-                                        t("form.submit")
+                                        t("Submit")
                                     )}
                                 </button>
                             </div>
@@ -259,31 +267,7 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Information */}
-                    <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg
-                                    className="w-6 h-6 text-blue-600"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                                    />
-                                </svg>
-                            </div>
-                            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                {t("contact.phone")}
-                            </h3>
-                            <p className="text-gray-600">
-                                {t("contact.phoneNumber")}
-                            </p>
-                        </div>
-
+                    <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <svg
@@ -301,10 +285,10 @@ const Contact = () => {
                                 </svg>
                             </div>
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                {t("contact.email")}
+                                {t("Email")}
                             </h3>
                             <p className="text-gray-600">
-                                {t("contact.emailAddress")}
+                                {t("Email Address")}
                             </p>
                         </div>
 
@@ -331,10 +315,10 @@ const Contact = () => {
                                 </svg>
                             </div>
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                {t("contact.address")}
+                                {t("Address")}
                             </h3>
                             <p className="text-gray-600">
-                                {t("contact.addressDetails")}
+                                {t("10056 Renton Ave S, Seattle, WA 98178")}
                             </p>
                         </div>
                     </div>

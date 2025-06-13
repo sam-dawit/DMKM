@@ -121,13 +121,7 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Link
-                            to="https://www.paypal.com/donate/?hosted_button_id=AXFVB9445SNEY"
-                            target="_Blank"
-                            className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium"
-                        >
-                            Donate
-                        </Link>
+
                         <div className="relative">
                             <button
                                 onClick={toggleLanguageMenu}
@@ -211,14 +205,7 @@ const Header = () => {
                                     )}
                                 </div>
                             ))}
-                            <Link
-                                to="https://www.paypal.com/donate/?hosted_button_id=AXFVB9445SNEY"
-                                target="_blank"
-                                className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium text-center"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Donate
-                            </Link>
+
                             <div className="flex items-center space-x-2">
                                 <MdLanguage className="text-xl " />
                                 <button

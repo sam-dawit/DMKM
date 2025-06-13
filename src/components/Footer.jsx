@@ -1,4 +1,4 @@
-import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -32,6 +32,15 @@ const Footer = () => {
                             >
                                 <FaYoutube className="text-2xl" />
                             </a>
+                            <a
+                                href="https://www.facebook.com/p/Seattle-Debre-Mihret-StMichael-Ethiopian-Orthodox-Tewahedo-Church-100064480521183/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-300 hover:text-white transition-colors"
+                                aria-label="Facebook"
+                            >
+                                <FaFacebook className="text-2xl" />
+                            </a>
                         </div>
                     </div>
 
@@ -42,7 +51,7 @@ const Footer = () => {
                         </h3>
                         <div className="space-y-1 text-sm text-gray-300">
                             <p>{t("footer.address")}</p>
-                            <p>Phone: {t("footer.phone")}</p>
+
                             <p>Email: {t("footer.email")}</p>
                         </div>
                     </div>

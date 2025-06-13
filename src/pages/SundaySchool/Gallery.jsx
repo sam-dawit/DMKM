@@ -1,5 +1,6 @@
 import React from "react";
-import SuperFlowSwiper from "../../components/SuperFlowSwiper";
+import ImageCarousel from "../../components/ImageCarousel";
+import InstagramCarousel from "../../components/InstagramCarousel";
 
 const Gallery = () => {
     return (
@@ -8,9 +9,23 @@ const Gallery = () => {
                 <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
                     Sunday School Gallery
                 </h1>
-                <div className="mb-12">
-                    <SuperFlowSwiper />
+
+                {/* Images Section */}
+                <div className="mb-8">
+                    <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+                        Photo Gallery
+                    </h2>
+                    <ImageCarousel />
                 </div>
+
+                {/* Instagram Reels Section */}
+                <div className="mb-16">
+                    <h2 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
+                        Instagram Reels
+                    </h2>
+                    <InstagramCarousel />
+                </div>
+
                 <div className="text-center">
                     <p className="text-gray-600 text-lg">
                         View our collection of photos and videos from Sunday

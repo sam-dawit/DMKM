@@ -12,11 +12,19 @@ const Home = () => {
                     <h1 className="text-5xl font-bold text-gray-900 mb-6">
                         {t("pages.home.title")}
                     </h1>
-                    <div className="prose prose-lg mx-auto text-gray-600">
+                    <div className="prose prose-lg mx-auto text-gray-600 mb-8">
                         <p className="text-xl leading-relaxed">
                             {t("pages.home.content")}
                         </p>
                     </div>
+                    <a
+                        href="https://www.paypal.com/donate/?hosted_button_id=AXFVB9445SNEY"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 font-medium text-lg"
+                    >
+                        Donate
+                    </a>
                 </div>
                 <div className="h-full">
                     <SuperFlowSwiper className="rounded-2xl" />
