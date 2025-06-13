@@ -6,19 +6,19 @@ import "swiper/css/effect-coverflow";
 
 const slides = [
     {
-        image: "/src/assets/church1.png",
+        image: "./assets/Church1.png",
         link: "/sundaySchool/gallery",
     },
     {
-        image: "/src/assets/Church2.png",
+        image: "./assets/Church2.png",
         link: "/sundaySchool/gallery",
     },
     {
-        image: "/src/assets/Church3.png",
+        image: "./assets/Church3.png",
         link: "/sundaySchool/gallery",
     },
     {
-        image: "/src/assets/Church4.png",
+        image: "./assets/Church4.png",
         link: "/sundaySchool/gallery",
     },
 ];
@@ -50,17 +50,21 @@ const SuperFlowSwiper = () => {
                     <SwiperSlide
                         key={index}
                         className="relative h-[300px] rounded-md overflow-hidden"
-                        style={{
-                            backgroundImage: `url(${slide.image})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                            boxShadow: "0 0 20px rgba(0,0,0,0.3)",
-                        }}
                     >
-                        <a
-                            href={slide.link}
-                            className="absolute inset-0 z-10 hover:bg-black/20 transition-all duration-300"
-                        />
+                        <div
+                            className="w-full h-full"
+                            style={{
+                                backgroundImage: `url(${slide.image})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                boxShadow: "0 0 20px rgba(0,0,0,0.3)",
+                            }}
+                        >
+                            <a
+                                href={slide.link}
+                                className="absolute inset-0 z-10 hover:bg-black/20 transition-all duration-300"
+                            />
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
