@@ -6,7 +6,7 @@
     "nav": {
         "about": "ስለ እኛ",
         "payments": "ክፍያዎች",
-        "sundaySchool": "እሁድ ት/ቤት",
+        "sundaySchool": "ሰንበተ ት/ቤት",
         "sermon": "ስብከቶች",
         "contact": "ያግኙን",
         "aboutHistory": "ታሪክ",
@@ -39,7 +39,7 @@
             "offeringDescription": "ተለይተው የተወሰኑ የቤተክርስቲያን ፕሮግራሞችን እና ፍላጎቶችን ለመደገፍ ስጦታ ይስጡ።"
         },
         "sundaySchool": {
-            "title": "እሁድ ት/ቤት",
+            "title": "ሰንበተ ት/ቤት",
             "content": "በእሁድ ት/ቤት ፕሮግራማችን ይቀላቀሉ።"
         },
         "sermon": {
@@ -61,6 +61,8 @@
             "emailPlaceholder": "ኢሜይል አድራሻዎን ያስገቡ",
             "purpose": "የመገናኘት ዓላማ",
             "purposePlaceholder": "እንዴት እንድንረዳዎት እንደምትችሉ ያሳውቁን",
+
+            "messagePlaceholder": "መልእክትዎት እዚህ ጻፍ...",
             "submit": "መልእክት ይላኩ",
             "submitting": "ይላካል...",
             "success": "ለመልእክትዎ አመሰግናለን። በቅርቡ እንመልስዎታለን።",

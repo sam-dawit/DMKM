@@ -48,7 +48,8 @@ const Sermon = () => {
                                 teachings.
                             </p>
                             <Link
-                                to="/sermons"
+                                to="https://www.youtube.com/@seattledebremihretkidusmic1710/videos"
+                                target="_blank"
                                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                             >
                                 View Sermons
@@ -68,7 +69,8 @@ const Sermon = () => {
                                 and services.
                             </p>
                             <Link
-                                to="/past-live"
+                                to="https://www.youtube.com/@seattledebremihretkidusmic1710/streams"
+                                target="_blank"
                                 className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
                             >
                                 View Past Streams

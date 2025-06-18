@@ -7,20 +7,20 @@ import MediaLightbox from "./MediaLightbox";
 
 const images = [
     {
-        type: "image",
         image: "./assets/Church1.png",
+        type: "image",
     },
     {
-        type: "image",
         image: "./assets/Church2.png",
+        type: "image",
     },
     {
-        type: "image",
         image: "./assets/Church3.png",
+        type: "image",
     },
     {
-        type: "image",
         image: "./assets/Church4.png",
+        type: "image",
     },
 ];
 

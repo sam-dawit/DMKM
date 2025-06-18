@@ -59,7 +59,15 @@ const InstagramCarousel = () => {
                     effect="coverflow"
                     grabCursor={true}
                     centeredSlides={true}
-                    slidesPerView={3}
+                    slidesPerView={1}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    }}
                     loop={true}
                     autoplay={{
                         delay: 2500,
@@ -72,7 +80,7 @@ const InstagramCarousel = () => {
                         modifier: 1,
                         slideShadows: true,
                     }}
-                    className="w-[880px] max-w-full"
+                    className="w-full max-w-[880px]"
                 >
                     {reels.map((reel, index) => (
                         <SwiperSlide

@@ -4,12 +4,6 @@ import { Link } from "react-router-dom";
 const Classes = () => {
     const classes = [
         {
-            name: "Nursery",
-            gradeLevel: "Ages 2-4",
-            description:
-                "Introduction to basic Bible stories and Christian values through play and simple activities.",
-        },
-        {
             name: "Primary",
             gradeLevel: "Ages 5-7",
             description:
@@ -41,7 +35,7 @@ const Classes = () => {
                 <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
                     Sunday School Classes
                 </h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {classes.map((classItem, index) => (
                         <div
                             key={index}

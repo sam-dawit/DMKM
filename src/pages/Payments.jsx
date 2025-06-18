@@ -28,10 +28,10 @@ const Payments = () => {
                     <div className="text-center">
                         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 shadow-xl transform transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
                             <h2 className="text-2xl font-semibold text-white mb-6">
-                                {t("pages.payments.donateTitle")}
+                                {t("Click Here to Donate")}
                             </h2>
                             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-                                {t("pages.payments.donateDescription")}
+                                {/* {t("pages.payments.donateDescription")} */}
                             </p>
                             <form
                                 action="https://www.paypal.com/donate"
